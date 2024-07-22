@@ -1,0 +1,51 @@
+﻿<Window x:Class="ProjectPRN212.ExamHistory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectPRN212"
+           mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" 
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Title="ExamHistory" Height="530" Width="500">
+    <Grid>
+        <StackPanel>
+            <materialDesign:ColorZone Mode="PrimaryLight">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Background="Transparent" >
+                        <StackPanel.Resources>
+                            <Style TargetType="Button">
+                                <Setter Property="Margin" Value="2 4 2 4"></Setter>
+                                <Setter Property="Width" Value="40"></Setter>
+                            </Style>
+                        </StackPanel.Resources>
+                        
+                        <Button ToolTip="Đóng" x:Name="btnClose" ToolBar.OverflowMode="AsNeeded" Background="OrangeRed" Click="btnClose_Click">
+                            <materialDesign:PackIcon Kind="WindowClose"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                        <TextBlock Margin="16,0,0,0" VerticalAlignment="Center" Text="Exam History" FontSize="17"/>
+                    </StackPanel>
+                </DockPanel>
+            </materialDesign:ColorZone>
+            <Image Width="500" Source="D:\Desktop\NET\ProjectPRN212\ProjectPRN212\PRN212\ExamHistory.png"/>
+            <ListView Height="260" x:Name="QuestionsListView" HorizontalAlignment="Stretch">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Exam Time" Width="220" DisplayMemberBinding="{Binding ExamTime}" />
+                        <GridViewColumn Header="Exam Score" Width="143" DisplayMemberBinding="{Binding Score}" />
+                        <GridViewColumn Header="View" Width="107">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="View" Tag="{Binding ExamHistoryId}" Click="ViewButton_Click"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button HorizontalAlignment="Right" FontWeight="Bold" x:Name="btnback" Background="Red" Margin="20" Foreground="#FF564B4B" FontSize="20"  Width="130" Height="40" Content="Back" Click="btnback_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
