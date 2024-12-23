@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\PRN212\ProjectGroup\ProjectPRN212\ProjectPRN212\obj\Debug\net8.0-windows8.0\
+D:\license-test\ProjectPRN212\ProjectPRN212\obj\Debug\net8.0-windows8.0\
 ProjectPRN212
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\PRN212\ProjectGroup\ProjectPRN212\ProjectPRN212\App.xaml
+D:\license-test\ProjectPRN212\ProjectPRN212\App.xaml
 13-152792168
 
 271693280500
-247-194213232
+247203441717
 AdminHome.xaml;DetailExamHistory.xaml;EdipQuestion.xaml;EdipUser.xaml;ExamHistory.xaml;InforExamNow.xaml;InforExamOto.xaml;Login.xaml;Register.xaml;ThiBangLaiXeMay.xaml;ThiBangLaiXeOto.xaml;UserChangepass.xaml;UserHome.xaml;
 
-True
+False
 
